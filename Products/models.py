@@ -14,3 +14,7 @@ class Offer(models.Model):
     code = models.CharField(max_length=25)
     description = models.CharField(max_length=300)
     discount = models.FloatField()
+
+
+class Customer(models.Model):
+    username = models.CharField(max_length=255)

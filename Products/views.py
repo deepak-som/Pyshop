@@ -1,10 +1,16 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from .models import Product
 
 
 def index(request):
-    return HttpResponse('Shambhoo')
+    products = Product.objects.all()
+    return render(request, 'products/dashboard.html', {'items': products})
 
 
 def new(request):
-    return HttpResponse('New Page Chant Har Har Mahadeva!')
+    return render(request, 'products/new.html')
+
+
+def customer(request):
+    return render(request, 'products/customer.html')

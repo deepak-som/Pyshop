@@ -1,0 +1,16 @@
+{% extends 'products/base.html' %}
+
+{% block content %}
+<p>DashBoard Shamboo Shivaay</p>
+
+<h1>Products</h1>
+<ul>
+    {% for product in items %}
+        <li>{{ product.name }} (Rs. {{ product.price }} per piece)</li>
+    {% endfor %}
+</ul>
+
+
+
+
+{% endblock  %}

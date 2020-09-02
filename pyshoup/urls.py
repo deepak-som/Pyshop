@@ -22,6 +22,7 @@ from Products import views
 from django.conf.urls import url, include
 from resit import views
 
+app_name = 'Products'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
