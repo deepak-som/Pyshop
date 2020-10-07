@@ -8,6 +8,7 @@ def index(request):
     return render(request, 'products/dashboard.html', {'items': products})
 
 
+
 def new(request):
     return render(request, 'products/new.html')
 

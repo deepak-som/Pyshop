@@ -18,13 +18,16 @@ from django.urls import path
 # products
 from Products import views
 
+
 # dprojx/urls.py
 from django.conf.urls import url, include
 from resit import views
+# pyshoup views
+from . import views
 
-app_name = 'Products'
 
 urlpatterns = [
+    path('', views.home),
     path('admin/', admin.site.urls),
     path('products/', include('Products.urls')),
     path('resit/', include('resit.urls')),
